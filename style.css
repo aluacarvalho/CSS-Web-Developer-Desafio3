@@ -1,0 +1,142 @@
+@import url('reset.css');
+
+body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    grid-template-areas: "header header header header" "sidebar main main main" ". footer footer footer";
+}
+
+header {
+    grid-area: header;
+}
+
+.youtube { 
+    display: flex;
+    align-items: center;
+    width: 100rem;
+}
+
+.youtube-logo {
+    height: 20px;
+    padding-left: 20px;
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 2rem 0 4rem;
+}
+
+.search-input {
+    width: 50%;
+    font-size: inherit;
+    padding: .4rem;
+    border: 1px solid #ccc;
+    border-radius: 0.15rem;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 0.15rem;
+    border-left: none;
+    background-color: ccc;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #f0f0f0;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem;
+}
+
+.menu-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-start: 5;
+    grid-column-end: 5;
+    place-items: center start;
+    align-self: start;
+    gap: 0.7rem;
+    padding: 0.5rem;
+}
+
+.channel-icon {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+main { 
+    grid-area: main;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    width: Hug (282px);
+    height: Fixed (262px);
+    gap: 50px;
+}
+
+.video img {
+    width: 250px;
+    object-fit: contain;
+}
+
+.video-details {
+    display: block;
+    margin: 5px;
+    width: Hug (249px);
+    height: Hug (74px);
+    gap: 10px;
+
+}
+
+.video-details h5, p {
+    position: relative;
+    float: right;
+    right: 65px;
+    font-size: 14px;
+    margin-top: 1px;
+    width: 197px;
+}
+
+.video-details p {
+    color: #3e3e3e;
+}
+
+.video-details img {
+    width: 42px;
+}
+
+footer {
+    grid-area: footer;
+    margin-top: 690px;
+    justify-self: end;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.sidebar {
+    display: grid;
+    width: 20%;
+    height: 90%;
+    top: 56px;
+    padding: 24px;
+    gap: 22px;
+}
