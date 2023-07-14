@@ -1,15 +1,21 @@
 @import url('reset.css');
 
 body {
+    width: 1440px;
+    height: 1024px;
     margin: 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 100px repeat(3, 200px);
-    grid-template-areas: "header header header header" "sidebar main main main" "sidebar footer footer footer";
+    grid-template-areas: "header header header header header" "sidebar main main main main" "sidebar footer footer footer footer";
 }
 
 header {
     grid-area: header;
+    display: grid;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.5rem;
 }
 
 .youtube { 
@@ -20,7 +26,11 @@ header {
 
 .youtube-logo {
     height: 20px;
-    padding-left: 20px;
+    padding-left: 15px;
+}
+
+.menu {
+    margin: 8px;
 }
 
 .search-bar {
@@ -52,19 +62,11 @@ header {
     background-color: #f0f0f0;
 }
 
-.menu {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    gap: 1.5rem;
-    padding: 0.5rem;
-}
-
 .menu-icons {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-start: 5;
-    grid-column-end: 5;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-start: 2;
+    grid-column-end: 2;
     place-items: center start;
     align-self: start;
     gap: 0.7rem;
@@ -95,7 +97,7 @@ main {
 }
 
 .video img {
-    width: 250px;
+    width: 220px;
     object-fit: contain;
 }
 
@@ -109,11 +111,8 @@ main {
 }
 
 .video-details h5, p {
-    position: relative;
     float: right;
-    right: 65px;
-    font-size: 14px;
-    margin-top: 1px;
+    font-size: 13px;
     width: 197px;
 }
 
@@ -123,21 +122,41 @@ main {
 
 .video-details img {
     width: 42px;
+    padding-right: 5px;
 }
 
 footer {
     grid-area: footer;
-    margin-top: 690px;
+    margin-top: 780px;
     justify-self: end;
-    padding: 5px;
     font-size: 12px;
 }
 
 .sidebar {
     display: grid;
-    width: 20%;
-    height: 90%;
-    top: 56px;
+    width: 218px;
+    height: 968px;
     padding: 24px;
     gap: 22px;
+}
+
+ul {
+    margin: 0;
+    padding: 24px;
+}
+
+.item {
+    display: flex;
+    list-style: none;
+    color: #3e3e3e;
+    padding: 3%;
+}
+
+.item p {
+    text-align: left;
+    left: 35px;
+}
+
+li img {
+    margin-right: 6px;
 }
